@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Model Paper</string>
+    <string name="password">password</string>
+    <string name="user_name">User Name</string>
+    <string name="name">Name</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="user">User</string>
+</resources>
