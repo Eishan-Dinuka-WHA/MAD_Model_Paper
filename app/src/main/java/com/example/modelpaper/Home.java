@@ -3,6 +3,7 @@ package com.example.modelpaper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class Home extends AppCompatActivity {
     EditText password;
     Button login;
     Button register;
+    Button media, camara;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,8 @@ public class Home extends AppCompatActivity {
         password = findViewById(R.id.etPasswordH);
         login = findViewById(R.id.btnLogin);
         register = findViewById(R.id.btnRegister);
+        media = findViewById(R.id.btnmediap);
+        camara = findViewById(R.id.btncam);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,5 +58,22 @@ public class Home extends AppCompatActivity {
 
             }
         });
+
+        media.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),MediaplayerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        camara.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),camara_photo_capture.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }
